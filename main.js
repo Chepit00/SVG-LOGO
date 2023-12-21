@@ -3,7 +3,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const svg = require("./lib/svg");
-// const { Shape, triangle, circle, square } = require('./lib/shapes'); 
 
 //questions that will be prompted to user in terminal thatll determine logo
 const questions = [
