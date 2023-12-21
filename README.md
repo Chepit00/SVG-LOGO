@@ -5,4 +5,3 @@
 ![`logo`](examples/circle.svg)
 
 ![`logo`](examples/tri.svg)
-
