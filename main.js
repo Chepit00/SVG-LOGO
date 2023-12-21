@@ -1,8 +1,11 @@
+
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const svg = require("./lib/svg");
+// const { Shape, triangle, circle, square } = require('./lib/shapes'); 
 
+//questions that will be prompted to user in terminal thatll determine logo
 const questions = [
   {
     type: "input",
@@ -27,16 +30,19 @@ const questions = [
   },
 ];
 
+//this will prompt questions when function is called then save answers 
 function init() {
   inquirer.prompt(questions).then((theAnswers) => {
-    // run my makeSvg function here
+
+    //saving answers into finalSvgText 
     const finalSvgText = svg(theAnswers);
+
     //write this text to file
-    //   fs.writeFileSync(path.join(process.cwd(), "logo.svg"), finalSvgText);
     fs.writeFile("./examples/logo.svg", finalSvgText, (err) =>
       err ? console.log(err) : console.log("Generated logo.svg!")
     );
   });
 }
 
+//calling function 
 init();
