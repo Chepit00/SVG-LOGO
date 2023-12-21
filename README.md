@@ -6,4 +6,3 @@
 
 ![`logo`](examples/tri.svg)
 
-![`logo`](examples/logo.svg)
